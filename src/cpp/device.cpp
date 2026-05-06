@@ -29,7 +29,6 @@ namespace iausb
     {
       libusb_unref_device(device->libusb_device);
       device->libusb_device = nullptr;
-      auxid::get_thread_logger().trace("libusb device destroyed successfully");
     }
 
     device->~Device_T();

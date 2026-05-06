@@ -30,7 +30,6 @@ namespace iausb
       libusb_release_interface(connection->libusb_handle, connection->interface);
       libusb_close(connection->libusb_handle);
       connection->libusb_handle = nullptr;
-      auxid::get_thread_logger().trace("libusb connection closed successfully");
     }
 
     connection->~Connection_T();

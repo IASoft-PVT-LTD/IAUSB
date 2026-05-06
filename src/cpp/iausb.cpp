@@ -174,8 +174,6 @@ namespace iausb
       return fail("libusb_claim_interface failed");
     }
 
-    auxid::get_thread_logger().trace("libusb connection opened successfully");
-
     HeapAllocator alloc;
     void *mem = alloc.alloc(sizeof(Connection_T), alignof(Connection_T));
     if (!mem)

@@ -26,8 +26,6 @@ namespace iausb
     if (init_result < 0)
       return fail("Failed to initialize libusb context with error %d", init_result);
 
-    auxid::get_thread_logger().trace("libusb context initialized successfully");
-
     return {};
   }
 
@@ -42,7 +40,6 @@ namespace iausb
     {
       libusb_exit(context->libusb_ctx);
       context->libusb_ctx = nullptr;
-      auxid::get_thread_logger().trace("libusb context destroyed successfully");
     }
 
     context->~Context_T();
