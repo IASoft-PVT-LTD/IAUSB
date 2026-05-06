@@ -1,0 +1,170 @@
+{
+  "version": 4,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 28
+  },
+  "configurePresets": [
+    {
+      "name": "iausb-x64-linux",
+      "displayName": "iausb Linux x64 (Clang)",
+      "inherits": "x64-linux",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/x64-linux-clang.cmake"
+      }
+    },
+    {
+      "name": "iausb-arm64-linux",
+      "displayName": "iausb Linux ARM64 (Clang Cross)",
+      "inherits": "arm64-linux",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/arm64-linux-clang.cmake"
+      }
+    },
+    {
+      "name": "iausb-x64-windows-msvc",
+      "displayName": "iausb Windows x64 (Ninja MSVC)",
+      "inherits": "x64-windows-msvc",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/x64-windows-msvc.cmake"
+      }
+    },
+    {
+      "name": "iausb-x64-windows-clang",
+      "displayName": "iausb Windows x64 (Ninja Clang)",
+      "inherits": "x64-windows-clang",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/x64-windows-clang.cmake"
+      }
+    },
+    {
+      "name": "iausb-arm64-windows-clang",
+      "displayName": "iausb Windows ARM64 (Ninja Clang Cross)",
+      "inherits": "arm64-windows-clang",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/arm64-windows-clang.cmake"
+      }
+    },
+    {
+      "name": "iausb-arm64-windows-msvc",
+      "displayName": "iausb Windows ARM64 (Ninja MSVC)",
+      "inherits": "arm64-windows-msvc",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/arm64-windows-msvc.cmake"
+      }
+    },
+    {
+      "name": "iausb-x64-windows",
+      "displayName": "iausb Windows x64 (Visual Studio 2022)",
+      "inherits": "x64-windows",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/x64-windows-msvc.cmake"
+      }
+    },
+    {
+      "name": "iausb-arm64-windows",
+      "displayName": "iausb Windows ARM64 (Visual Studio 2022)",
+      "inherits": "arm64-windows",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/arm64-windows-msvc.cmake"
+      }
+    },
+    {
+      "name": "iausb-wasm32-emscripten",
+      "displayName": "iausb WebAssembly (Clang)",
+      "inherits": "wasm32-emscripten",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/wasm32-emscripten-clang.cmake"
+      }
+    },
+    {
+      "name": "iausb-x64-windows-cross",
+      "displayName": "iausb Windows x64 (Clang Cross Linux Host)",
+      "inherits": "x64-windows-cross",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/libauxid/cmake/toolchains/x64-windows-cross-clang.cmake"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "iausb-x64-linux",
+      "configurePreset": "iausb-x64-linux"
+    },
+    {
+      "name": "iausb-arm64-linux",
+      "configurePreset": "iausb-arm64-linux"
+    },
+    {
+      "name": "iausb-x64-windows-msvc",
+      "configurePreset": "iausb-x64-windows-msvc"
+    },
+    {
+      "name": "iausb-x64-windows-clang",
+      "configurePreset": "iausb-x64-windows-clang"
+    },
+    {
+      "name": "iausb-arm64-windows-clang",
+      "configurePreset": "iausb-arm64-windows-clang"
+    },
+    {
+      "name": "iausb-arm64-windows-msvc",
+      "configurePreset": "iausb-arm64-windows-msvc"
+    },
+    {
+      "name": "iausb-x64-windows",
+      "configurePreset": "iausb-x64-windows"
+    },
+    {
+      "name": "iausb-arm64-windows",
+      "configurePreset": "iausb-arm64-windows"
+    },
+    {
+      "name": "iausb-wasm32-emscripten",
+      "configurePreset": "iausb-wasm32-emscripten"
+    },
+    {
+      "name": "iausb-x64-windows-cross",
+      "configurePreset": "iausb-x64-windows-cross"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "iausb-x64-linux",
+      "configurePreset": "iausb-x64-linux",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "iausb-x64-windows",
+      "configurePreset": "iausb-x64-windows",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "iausb-x64-windows-clang",
+      "configurePreset": "iausb-x64-windows-clang",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ],
+  "include": [
+    "libauxid/CMakePresets.json"
+  ]
+}
