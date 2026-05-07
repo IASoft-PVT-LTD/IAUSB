@@ -2,7 +2,7 @@
   <img src="logo.png" alt="IAUSB Logo" width="190" style="padding-bottom: 8px;"/>
   <br/>
 
-  <img src="https://img.shields.io/badge/license-GPLv3-darkblue.svg" alt="License"/>
+  <img src="https://img.shields.io/badge/license-Apache v2-darkblue.svg" alt="License"/>
   <img src="https://img.shields.io/badge/platform-Win64 | Linux-darkred.svg" alt="Platform"/>
   <img src="https://img.shields.io/badge/compiler-MSVC | Clang-darkgreen.svg" alt="Compiler"/>
 
