@@ -38,7 +38,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [iausb-x64-windows-clang]
+        target: [iausb-x64-windows-clang, iausb-x64-windows]
 
     steps:
       - uses: actions/checkout@v4

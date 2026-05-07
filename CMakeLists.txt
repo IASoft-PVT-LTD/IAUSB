@@ -3,6 +3,12 @@ cmake_minimum_required(VERSION 3.20)
 project(iausb)
 enable_testing()
 
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    # Ensure POSIX/GNU libc symbols (e.g. strdup/strndup/fmemopen/reallocarray)
+    # are declared for C dependencies built via FetchContent (libconfuse, etc.).
+    add_compile_definitions(_DEFAULT_SOURCE _GNU_SOURCE)
+endif()
+
 if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
     set(iausb_IS_TOP_LEVEL ON)
 else()
