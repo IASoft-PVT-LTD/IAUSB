@@ -19,7 +19,6 @@
 #include <auxid/auxid.hpp>
 #include <auxid/containers/vec.hpp>
 #include <auxid/memory/box.hpp>
-#include <auxid/memory/heap.hpp>
 
 namespace iausb
 {
