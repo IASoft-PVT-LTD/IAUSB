@@ -83,4 +83,9 @@ int main(int argc, char *argv[])
 
 ## License
 
-Copyright © 2026 I-A-S. Licensed under the [GNU General Public License, version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+Copyright © 2026 IASoft (PVT LTD). Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+> [!NOTE]
+> While IAUSB is released under the Apache 2.0 license, the dependency `libftdi` is licensed under the LGPL v2.1.
+> `libftdi` is built and linked as a dynamic library by the CMake files in this repository by default.
+> This means your code will not be subject to the LGPL's copyleft requirements for derivative works, as long as you do not link `libftdi` statically.
