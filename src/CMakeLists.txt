@@ -13,6 +13,6 @@ target_include_directories(iausb PRIVATE hpp)
 
 target_link_libraries(iausb PUBLIC libauxid)
 target_link_libraries(iausb PRIVATE 
-    ftdi1    
+    usb-1.0    
     auxid_platform_standard
 )
