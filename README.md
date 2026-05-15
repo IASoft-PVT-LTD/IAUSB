@@ -83,9 +83,9 @@ int main(int argc, char *argv[])
 
 ## License
 
-Copyright © 2026 IASoft (PVT LTD). Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+Copyright © 2026 IASoft (PVT) LTD. Licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0).
 
 > [!NOTE]
-> While IAUSB is released under the Apache 2.0 license, the dependency `libusb` is licensed under the LGPL v2.1.
+> While IAUSB itself is released under the PolyForm Noncommercial license, its dependency `libusb` is licensed under the LGPL v2.1.
 > `libusb` is built and linked as a dynamic library by the CMake files in this repository by default.
-> This means your code will not be subject to the LGPL's copyleft requirements for derivative works, as long as you do not link `libusb` statically.
+> This means your code will not be subject to the LGPL's copyleft requirements for derivative works, as long as you do not link `libusb` statically. However, any use of this software—including its dependencies within this project—must still adhere to the noncommercial restrictions of the primary IAUSB license.
